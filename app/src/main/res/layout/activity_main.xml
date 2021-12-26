@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/computersChoiceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/computers_choice"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@id/computersChoice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/computersChoice"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/padrao"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/computersChoiceText" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/your_choice"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/computersChoice" />
+
+        <ImageView
+            android:id="@+id/imgRock"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/pedra"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imgPaper"
+            app:layout_constraintTop_toBottomOf="@id/resultText" />
+
+        <ImageView
+            android:id="@+id/imgPaper"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/papel"
+            app:layout_constraintLeft_toRightOf="@id/imgRock"
+            app:layout_constraintRight_toLeftOf="@id/imgScissors"
+            app:layout_constraintTop_toBottomOf="@id/resultText" />
+
+        <ImageView
+            android:id="@+id/imgScissors"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/tesoura"
+            app:layout_constraintLeft_toRightOf="@id/imgPaper"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultText" />
+
+        <TextView
+            android:id="@+id/playersChoiceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/rubik_bold"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPaper" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
